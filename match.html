@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>GetdeBall</title>
+  <meta name="description" content="Find your football information with GetdeBall!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.png" type="image/png" sizes="16x16 32x32 48x48 64x64 128x128">
+  <link rel="apple-touch-icon" href="favicon.png" type="image/png" sizes="16x16 32x32 48x48 64x64 128x128">
+  <link rel="stylesheet" href="/styles/materialize.min.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#4A148C" />
+  </head>
+  
+  <body>
+    <div class="navbar-fixed">
+      <nav class="purple darken-4" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo" id="logo-container">GetdeBall</a>
+          <a class="sidenav-trigger back" data-target="nav-mobile" onclick="window.location.href = window.location.origin + `#home`">
+            <i class="material-icons">arrow_back</i>
+          </a>
+          <ul class="topnav right hide-on-med-and-down">
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="nav-mobile"></ul>
+    <div id="body-content">
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="images/slide1.jpg">
+        </div>
+      </div>
+      <div class="container overlay-container" id="match-score">
+      </div>
+      <div class="center-align">
+        <a class="btn-large purple darken-4 circle hide-on-med-and-down" id="back" onclick="window.location.href = window.location.origin + `#home`">
+          <i class="large material-icons">arrow_back</i>
+        </a>
+        <a class="btn-large purple darken-4 circle" id="save">
+          <i class="large material-icons">turned_in_not</i>
+        </a>
+        <a class="btn-large purple darken-4 circle" id="delete">
+          <i class="large material-icons">delete</i>
+        </a>
+      </div>
+    </div>
+    
+    <script src="/scripts/lib/materialize.min.js"></script>
+    <script src="/scripts/loader/match.js" type="module"></script>
+    <script src="/scripts/register.js"></script>
+    
+  </body>
+</html>
