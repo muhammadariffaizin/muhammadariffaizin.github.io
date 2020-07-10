@@ -55,7 +55,7 @@ if (workbox) {
     console.log(workbox);
 
     workbox.precaching.precacheAndRoute(urlsToCache, {
-        ignoreURLParametersMatching: [/.*/]
+        ignoreUrlParametersMatching: [/.*/]
     });
 
     workbox.routing.registerRoute(
@@ -73,7 +73,14 @@ if (workbox) {
     );
 
     workbox.routing.registerRoute(
-        new RegExp('/components/'),
+        new RegExp('https://upload.wikimedia.org/'),
+        workbox.strategies.cacheFirst({
+            cacheName: 'badge-team',
+        })
+    );
+
+    workbox.routing.registerRoute(
+        /.*(?:html)$/,
         new workbox.strategies.StaleWhileRevalidate({
             cacheName: 'pages',
         })
