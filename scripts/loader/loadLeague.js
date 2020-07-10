@@ -14,7 +14,6 @@ const getLeagues = () => {
         let isCached = false;
         footCache.leagues()
             .then(data => {
-                console.log(data);
                 if (data !== undefined) {
                     loadCardLeague(data.competitions, "leagues");
                     document.querySelectorAll(".card-league[id]").forEach((card) => {
